@@ -9,8 +9,7 @@ h1{
   font-family: arial;
   padding: 150px;
   margin-top: 0px;
-  background-image:url("ballonger.jpg");
-}
+  
 body{
   margin:0;
   background-color: pink;
@@ -38,4 +37,8 @@ padding: 300px;
 
 nav{
   margin: 0;
+}
+footer{
+
+  background-color: #e9e9e9e9;
 }
