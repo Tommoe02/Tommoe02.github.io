@@ -1,0 +1,83 @@
+header{
+  background-color: lightblue;
+
+
+}
+h1{
+  font-size: 50px;
+  text-align: center;
+  font-family: arial;
+  padding: 150px;
+  margin-top: 0px;
+}
+div{
+  border: 5px solid purple;
+  background-color: white;
+  margin: 30px;
+  margin-top: 0;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+p{
+  margin: 20;
+}
+
+ul{
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+li{
+  display: inline;
+}
+h1 a{
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  color: black;
+
+}
+li a{
+  text-decoration: none;
+  background-color: red;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  color: lightblue;
+}
+
+
+
+#hjem{
+  grid-column: 3;
+}
+#sport{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.storsak{
+  grid-column: span 2;
+  grid-row: span 2;
+
+}
+.middelssak{
+grid-row: span 2;
+grid-column: span 1;
+
+}
+.litensak{
+grid-row: span 1;
+grid-column: span 1;
+width: 300px;
+}
+img{
+  width: 90%;
+
+}
