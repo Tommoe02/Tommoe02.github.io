@@ -19,17 +19,24 @@ div{
   margin-right: 150px;
 }
 
-p{
-  margin: 20;
-}
+
 
 ul{
+  margin-bottom: 100px;
+  text-align: center;
   list-style-type: none;
   margin-left: 0px;
+  margin-right: auto;
+  margin-right: auto;
 }
 
 li{
   display: inline;
+  background-color: red;
+  width: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
 }
 h1 a{
   text-decoration: none;
@@ -37,18 +44,31 @@ h1 a{
   border-radius: 10px;
   margin: 10px;
   color: black;
-
 }
+
 li a{
   text-decoration: none;
-  background-color: red;
-  padding: 20px;
-  border-radius: 10px;
   margin: 10px;
   color: lightblue;
 }
+section a{
+  text-decoration: none;
+}
 
+div{
+  border: 5px solid purple;
+  background-color: white;
+  margin: 30px;
+  margin-top: 0;
+  margin-left: 150px;
+  margin-right: 150px;
+}
 
+a{
+  margin-left: 150px;
+  margin-right: 150;
+  width: 600px;
+}
 
 #hjem{
   grid-column: 3;
@@ -60,8 +80,26 @@ li a{
 
 main{
   display: grid;
+}
+
+main > div.Kuk {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+Main > div > p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+Main > div {
+
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;}
+
 .storsak{
   grid-column: span 2;
   grid-row: span 2;
