@@ -1,0 +1,35 @@
+header{
+  display: grid;
+  grid-template-columns: 10% 60% 10% 10% 10%;
+  align-items: center;
+}
+#hjem{
+  grid-column: 3;
+}
+#sport{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.storsak{
+  grid-column: span 3;
+  grid-row: span 3;
+
+}
+.middelssak{
+grid-row: span 2;
+grid-column: span 2;
+
+}
+.litensak{
+grid-row: span 1;
+grid-column: span 1;
+}
+img{
+  width: 90%;
+
+}
