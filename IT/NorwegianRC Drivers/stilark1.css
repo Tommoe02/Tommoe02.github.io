@@ -119,3 +119,47 @@ img{
   width: 90%;
 
 }
+.dropdown-arrow{
+
+}
+
+.dropdown{
+  margin: auto;
+  position: relative;
+  display: inline-block;
+  grid-column: 2;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: rgb(20, 40, 56);
+  width: 100%;
+  transition: 0.5s;
+}
+
+.dropbtn{
+  color: white;
+  background-color: transparent;
+  font-size: 1.4vw;
+  border: none;
+  transition: 0.5s;
+}
+
+.dropdown-content a{
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content > a:hover{
+  background-color: rgb(195, 195, 195);
+}
+
+.dropdown:hover > .dropdown-content{
+  display: block;
+}
+
+.ButtonCatLink{
+  padding-left: 1vw;
+}
