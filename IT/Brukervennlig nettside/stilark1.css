@@ -1,0 +1,83 @@
+body {
+  display: grid;
+}
+
+h1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 50px;
+  color: yellow;
+  width: 600px;
+  background: rgb(61, 61, 61);
+  border: solid yellow;
+  text-align: center;
+}
+
+nav  {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: blue;
+  background: rgb(61, 61, 61);
+  width: 600px;
+  height: 50px;
+  border: solid blue;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.shit > li {
+  list-style-type: none;
+  position: relative;
+  text-align: center;
+}
+
+li:hover {
+  transition: 0.5s;
+  background-color: yellow;
+}
+
+li > a {
+  transition: 0.5s;
+  display: block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: yellow;
+  font-size: 20px;
+}
+
+li:hover > a {
+  color: rgb(61, 61, 61);
+}
+
+.midt {
+  display: block;
+}
+
+.midtimidt {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  background-color: rgb(61, 61, 61);
+  width: 400px;
+  border: solid yellow;
+}
+
+.midtimidt > h2 {
+  color: green;
+  text-align: center;
+}
+
+.midtimidt > p {
+  color: green;
+  margin-left: 20px;
+  margin-right: 10px;
+}
