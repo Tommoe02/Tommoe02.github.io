@@ -1,17 +1,31 @@
 body {
   display: grid;
+  font-family: arial;
+  margin: 0;
+  background-image: url("bilder/Hack.jpg");
 }
 
 h1 {
   display: block;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   margin-left: auto;
   margin-right: auto;
   font-size: 50px;
-  color: yellow;
+  color: lightyellow;
   width: 600px;
   background: rgb(61, 61, 61);
-  border: solid yellow;
+  border: solid lightyellow;
   text-align: center;
+}
+
+h2{
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  color: lightyellow;
+}
+
+h3{
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  color: lightyellow;
 }
 
 nav  {
@@ -24,11 +38,11 @@ nav  {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: blue;
+  border: lightgreen;
   background: rgb(61, 61, 61);
   width: 600px;
   height: 50px;
-  border: solid blue;
+  border: solid lightyellow;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
@@ -67,17 +81,88 @@ li:hover > a {
   margin-right: auto;
   margin-top: 40px;
   background-color: rgb(61, 61, 61);
-  width: 400px;
-  border: solid yellow;
+  width: 60%;
+  border: solid lightyellow;
+  margin-bottom: 200px;
+}
+
+.midtimidti{
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 200px;
+  width: 75%;
+  background: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  padding: 50px;
 }
 
 .midtimidt > h2 {
-  color: green;
+  color: #eee;
   text-align: center;
 }
 
 .midtimidt > p {
-  color: green;
+  color: lightyellow;
   margin-left: 20px;
   margin-right: 10px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.person {
+  display: grid;
+  grid-template-columns: repeat(3, 33.333%);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+.Pbox2 {
+  grid-column: span 2;
+}
+.Pbox7 {
+  grid-column: span 2;
+}
+
+
+#kilde{
+  font-style: italic;
+}
+
+footer{
+  background-color: #4d4d4d;
+  width: 100%;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
+}
+
+.bildee{
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.h2{
+  color: #333333
+}
+
+.h3{
+  color: #333333
+}
+
+hr{
+
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.hvit{
+  color: white;
+  background: #333333;
+  padding: 10px;
 }
