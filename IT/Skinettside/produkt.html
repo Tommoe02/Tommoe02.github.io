@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Produkt</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAZmdWI1aD31RI5homEkFX2CP86W3pCqfI",
+        authDomain: "secski-7667f.firebaseapp.com",
+        databaseURL: "https://secski-7667f.firebaseio.com",
+        projectId: "secski-7667f",
+        storageBucket: "secski-7667f.appspot.com",
+        messagingSenderId: "1031374694835"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+
+  <body>
+    <main>
+      <script type="text/javascript">
+        const main = document.querySelector("main");
+
+        let url_string = window.location.href;
+        let url = new URL(url_string);
+        let id = url.searchParams.get("id");
+
+        //console.log(id);
+
+        const db = firebase.database();
+        const ski = db.ref();
+        const valgtSki = db.ref("ski/"+id);
+
+        visValgtSki();
+
+        function visValgtSki(){
+          main.innerHTML = ``;
+          valgtSki.on("value",genererHTML);
+        }
+
+        function genererHTML(snapshot){
+          let key = snapshot.key;
+          let objekt = snapshot.val();
+          console.log(key);
+          console.log(key,objekt);
+
+
+        main.innerHTML += `
+          <section class="valgtSki">
+          <h1>${objekt.navn}</h1>
+          <img src="${objekt.ImageURL}">
+          <p>${typeTekst}</p>
+          <p>type: ${objekt.type}</p>
+          <p>lengde: ${objekt.lengde}</p>
+          <p>farge1: ${objekt.farge1}</p>
+          <p>farge2: ${objekt.farge2}</p>
+          <p>merke: ${objekt.merke}</p>
+          <p>navn: ${objekt.navn}</p>
+          <p>pris: ${objekt.pris}</p>
+          </section>
+        `
+      }
+
+
+
+      </script>
+    </main>
+  </body>
+</html>

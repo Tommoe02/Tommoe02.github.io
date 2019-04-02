@@ -1,0 +1,84 @@
+body{
+  margin: 0;
+
+}
+
+#secSki{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  width: 90%;
+  margin: auto;
+}
+header{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: auto;
+  text-align: center;
+  margin-bottom: 40px;
+  display: sticky;
+
+}
+button{
+  width: 12vw;
+  height: 6vw;
+  background-color: #848484;
+  color: white;
+  border: .2vw solid #c1c1c1;
+  font-size: 1.7vw;
+  color: black;
+  text-align: center;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  border-radius: 1vw;
+  padding: 0;
+}
+.loggInn{
+  width: 12vw;
+  height: 6vw;
+  background-color: #848484;
+  color: white;
+  border: .2vw solid #c1c1c1;
+  font-size: 1.7vw;
+  color: black;
+  text-align: center;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  border-radius: 1vw;
+  padding: 1.5vw;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  margin-top: 1vw;
+  text-decoration: none;
+}
+button:hover{
+  background-color: #a0a0a0;
+}
+.ski:hover{
+  background-color: #d9f9f9;
+  /*opacity: 0.5;*/
+}
+.ski{
+  text-align: center;
+}
+.div{
+  margin: 1vw;
+
+}
+
+.navLogo{
+  background-image: url("skilogo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#bildesec{
+  transition: all .5s;
+}
+#bildesec:hover{
+  transform: scale(1.1);
+}
+body{
+  background-image: url(bild.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+}
