@@ -22,9 +22,9 @@
   </head>
 
   <body>
-    <header>
+    <header id="header">
 
-      <div class="navLogo"></div>
+      <div style="margin: auto;"><div class="navLogo"></div></div>
       <div><button class="div" type="button" name="button" onclick="visAlleSki()">Alle produkter</button></div>
       <div><button class="div" type="button" name="button" onclick="visAlleBrett()">Brett</button></div>
       <div><button class="div" type="button" name="button" onclick="visAlleTwintip()">Twintip</button></div>
@@ -40,6 +40,17 @@
     </main>
 
     <script type="text/javascript">
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.fontSize = "30px";
+      } else {
+    document.getElementById("header").style.height = "20px";
+    }
+}
+
       const secSki = document.querySelector("#secSki");
 
       const db = firebase.database();
@@ -68,10 +79,10 @@
         twintip.orderByChild("pris").limitToLast(4).on("child_added",genererHTML);
         Brett.orderByChild("pris").limitToLast(2).on("child_added",genererHTML);
       }
-
-
       function genererHTML(snapshot){
         console.log(snapshot.val());
+        let parent = snapshot.ref.parent.key;
+        let ref = parent +"/"+ key;
         let key = snapshot.key;
         let objekt = snapshot.val();
         let fargee = "";
@@ -93,7 +104,7 @@
             <img id="bildesec" src="${objekt.bilde}" alt="">
             <p>${fargee}</p>
             <p>Pris: ${objekt.pris}</p>
-            <a href="produkt.html?id=${key}">Vis Mer</a>
+            <a href="produkt.html?id=${ref}">Vis Mer</a>
           </article>
         `;
 

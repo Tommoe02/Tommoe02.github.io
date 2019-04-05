@@ -10,6 +10,7 @@
   body>div>p{
     color: blue;
     font-size: 39px;
+    text-align: center;
   }
   body{
         background-color: yellow;

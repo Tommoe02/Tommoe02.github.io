@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCFhmDveqpzRvevF6EyrLOh0NbACDQ3C_4",
+        authDomain: "pokemon-uke-8.firebaseapp.com",
+        databaseURL: "https://pokemon-uke-8.firebaseio.com",
+        projectId: "pokemon-uke-8",
+        storageBucket: "",
+        messagingSenderId: "974522538356"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+    <main>
+      <script type="text/javascript">
+      //referanse til htmlelementer
+        const main = document.querySelector("main");
+
+        //kode som henter ut info fra URL
+        let url_string = window.location.href;
+        let url = new URL (url_string);
+        let id = url.searchParams.get("id");
+
+        console.log(id);
+
+        //Referanser til databaseURL
+        const db = firebase.database();
+        const pokemon = db.ref();
+        const valgtPokemon = db.ref("pokemon/"+id)
+
+        visValgtPokemon();
+
+        function visValgtPokemon(){
+          main.innerHTML = ``;
+          valgtPokemon.on("value",genererHTML);
+        }
+        //pokemon.on("child_added",visPokemon);
+        function genererHTML(snapshot){
+          let key = snapshot.key;
+          let objekt = snapshot.val();
+          console.log(key,objekt);
+          let typeTekst = "";
+          if(objekt.Type2){
+            typeTekst =`Type 1 ${objekt.Type1} og Type 2 ${objekt.Type2}`;
+          }
+          else{
+            typeTekst = `Type 1: ${objekt.Type1}`;
+          }
+
+          main.innerHTML += `
+            <section class="valgtPokemon">
+            <h1>${objekt.Name}</h1>
+            <img src="${objekt.ImageURL}">
+            <p>${typeTekst}</p>
+            <p>Max HP: ${objekt.MaxHP}</p>
+            <p>Max CP: ${objekt.MaxCP}</p>
+            </section>
+          `
+        }
+
+      </script>
+    </main>
+  </body>
+</html>

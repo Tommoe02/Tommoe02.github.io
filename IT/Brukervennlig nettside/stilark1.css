@@ -45,6 +45,7 @@ nav  {
   border: solid lightyellow;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  font-family: 'ZCOOL QingKe HuangYou',cursive;
 }
 
 .shit > li {

@@ -3,6 +3,10 @@ body{
 
 }
 
+main{
+  margin-top: 12vw;
+}
+
 #secSki{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -11,12 +15,19 @@ body{
   margin: auto;
 }
 header{
+  line-height: 8vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: auto;
   text-align: center;
   margin-bottom: 40px;
-  display: sticky;
+  border-bottom-style: solid;
+  border-bottom-color: #848484;
+  background-color: #cee1ff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2;
 
 }
 button{
@@ -69,6 +80,7 @@ button:hover{
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  padding: 3.3vw;
 }
 #bildesec{
   transition: all .5s;

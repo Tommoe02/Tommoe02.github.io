@@ -3,21 +3,21 @@ body{
   background-attachment: fixed;
   background-size: cover;
 }
-
-
-
-iframe{
-  width: 1200px;
-  height: 650px;
-}
 h1{
   font-size: 50px;
   text-align: center;
   font-family: arial;
   padding: 150px;
   margin-top: 0px;
+}
+img{
+  width: 90%;
+  height: 90%;
+}
 
-
+iframe{
+  width: 1200px;
+  height: 650px;
 }
 div{
   border: 5px solid purple;
@@ -27,8 +27,6 @@ div{
   margin-left: 150px;
   margin-right: 150px;
 }
-
-
 
 ul{
   margin-bottom: 100px;
@@ -64,15 +62,6 @@ section a{
   text-decoration: none;
 }
 
-div{
-  border: 5px solid purple;
-  background-color: white;
-  margin: 30px;
-  margin-top: 0;
-  margin-left: 150px;
-  margin-right: 150px;
-}
-
 a{
   margin-left: 150px;
   margin-right: 150;
@@ -103,10 +92,6 @@ Main > div > p {
   margin-right: auto;
 }
 
-Main > div {
-
-
-}
 
 #Ree{
   z-index: 0;
@@ -131,11 +116,8 @@ grid-row: span 1;
 grid-column: span 1;
 width: 300px;
 }
-img{
-  width: 90%;
-  height: 90%;
 
-}
+
 .navbar {
     overflow: hidden;
     background-color: none;
@@ -154,52 +136,4 @@ img{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
-
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: #000000;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: lightgrey;
-    transition: 0.3s;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(200,200,200);
-    min-width: 79px;
-    box-shadow: 10px 4px 29px 0px rgba(0,0,0,1);
-    z-index: 1;
-}
-
-.dropdown-content>a {
-    float: none;
-    color: black;
-    padding: 12px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    padding-left: 10px;
-}
-
-.dropdown-content a:hover {
-    background-color: lightgrey;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }

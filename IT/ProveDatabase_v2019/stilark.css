@@ -1,0 +1,43 @@
+
+  #secDyr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    width: 90%;
+    margin: auto;
+  }
+  header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  button{
+    width: 150px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    border-color: white;
+    font-size: 20px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+  }
+  button:hover{
+    background-color: #c1c1bf;
+  }
+  .dyr:hover{
+    background-color: rgb(0, 200, 200);
+  }
+.dyr{
+  text-align: center;
+}
+#bildesec{
+  transition: all .5s;
+}
+#bildesec:hover{
+  transform: scale(1.1);
+}
+body{
+  background-color: cyan;
+}
