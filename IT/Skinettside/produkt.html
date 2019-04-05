@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Produkt</title>
-
+    <link rel="stylesheet" href="stilark.css">
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -16,12 +16,25 @@
         messagingSenderId: "1031374694835"
       };
       firebase.initializeApp(config);
+
     </script>
 
   </head>
 
   <body>
+    <header id="header">
+
+      <div style="margin: auto;"><div class="navLogo"></div></div>
+      <div><button class="div" type="button" name="button" onclick="visAlleSki()">Alle produkter</button></div>
+      <div><button class="div" type="button" name="button" onclick="visAlleBrett()">Brett</button></div>
+      <div><button class="div" type="button" name="button" onclick="visAlleTwintip()">Twintip</button></div>
+      <div><button class="div" type="button" name="button" onclick="visBesteProdukter()">Bestselgere</button></div>
+
+    </header>
+
     <main>
+
+    </main>
       <script type="text/javascript">
         const main = document.querySelector("main");
 
@@ -33,7 +46,7 @@
 
         const db = firebase.database();
         const ski = db.ref();
-        const valgtSki = db.ref("ski/"+id);
+        const valgtSki = db.ref("Ski/"+id);
 
         visValgtSki();
 
@@ -53,7 +66,6 @@
           <section class="valgtSki">
           <h1>${objekt.navn}</h1>
           <img src="${objekt.ImageURL}">
-          <p>${typeTekst}</p>
           <p>type: ${objekt.type}</p>
           <p>lengde: ${objekt.lengde}</p>
           <p>farge1: ${objekt.farge1}</p>
@@ -68,6 +80,5 @@
 
 
       </script>
-    </main>
   </body>
 </html>

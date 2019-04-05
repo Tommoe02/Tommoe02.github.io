@@ -41,15 +41,15 @@
 
     <script type="text/javascript">
 
-    window.onscroll = function() {scrollFunction()};
+    /*window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("header").style.fontSize = "30px";
       } else {
     document.getElementById("header").style.height = "20px";
-    }
-}
+  }
+} */
 
       const secSki = document.querySelector("#secSki");
 
@@ -82,8 +82,8 @@
       function genererHTML(snapshot){
         console.log(snapshot.val());
         let parent = snapshot.ref.parent.key;
-        let ref = parent +"/"+ key;
         let key = snapshot.key;
+        let ref = parent +"/"+ key;
         let objekt = snapshot.val();
         let fargee = "";
         if (objekt.farge2) {
