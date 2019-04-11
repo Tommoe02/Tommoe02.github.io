@@ -24,15 +24,15 @@
   <body>
     <header id="header">
 
-      <div style="margin: auto;"><div class="navLogo"></div></div>
+      <a href="hjem.html">  <div style="margin: auto;"><div class="navLogo"></div></div></a>
       <div><button class="div" type="button" name="button" onclick="visAlleSki()">Alle produkter</button></div>
       <div><button class="div" type="button" name="button" onclick="visAlleBrett()">Brett</button></div>
       <div><button class="div" type="button" name="button" onclick="visAlleTwintip()">Twintip</button></div>
       <div><button class="div" type="button" name="button" onclick="visBesteProdukter()">Bestselgere</button></div>
 
     </header>
-    <main>
-
+    <main id="mainindex">
+      <p id="loading">LOADINGGGG....</p>
       <section id="secSki">
 
       </section>
@@ -56,6 +56,7 @@
       const db = firebase.database();
       const twintip = db.ref("Ski/Twintip");
       const Brett = db.ref("Ski/Brett");
+      const load = document.querySelector("#loading");
 
       visAlleSki();
 
@@ -92,22 +93,22 @@
         } else {
           fargee = `${objekt.farge1}`;
         }
-        /*if(objekt.farge2){
-          farge = `${objekt.farge1} og ${objekt.farge2.toLowerCase()}`;
-        }else{
-          farge = `${objekt.farge1};
-        }*/
+
 
         secSki.innerHTML += `
           <article class="ski">
+            <a href="produkt.html?id=${ref}">
             <h1><b>${objekt.merke}</b> - ${objekt.navn}</h1>
             <img id="bildesec" src="${objekt.bilde}" alt="">
             <p>${fargee}</p>
             <p>Pris: ${objekt.pris}</p>
-            <a href="produkt.html?id=${ref}">Vis Mer</a>
+            </a>
           </article>
         `;
 
+if (secSki != 0) {
+  load.innerHTML = ``;
+}
       }
     </script>
   </body>

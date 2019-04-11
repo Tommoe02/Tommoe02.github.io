@@ -1,10 +1,25 @@
 body{
   margin: 0;
-
+  background-image: url(https://wallpapersite.com/images/wallpapers/skiing-4383x2922-alaska-4k-5868.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-main{
+a{
+  text-decoration: none;
+  color: black;
+}
+#mainindex{
   margin-top: 12vw;
+}
+
+.Produktbilde{
+  width: 5vw;
+  float: left;
+}
+
+.valgtSki{
+  text-align: right;
 }
 
 #secSki{
@@ -14,7 +29,45 @@ main{
   width: 90%;
   margin: auto;
 }
-header{
+
+#produktmain{
+  margin-top: 10vw;
+}
+
+#homemain{
+  margin-top: 6vw;
+}
+
+.hometxt{
+  margin: 0;
+  margin-top: 5vw;
+  text-align: center;
+  font-size: 3vw;
+  font-family: monospace;
+}
+
+#lastimg{
+  margin-bottom: 3vw;
+}
+
+#firsttxt{
+  margin-top: 10vw;
+}
+
+.homeimg{
+  display: block;
+  margin: auto;
+  width: 60vw;
+  margin-top: 2vw;
+  transition: .5s;
+  z-index: 2;
+}
+
+.homeimg:hover{
+  transform: scale(1.1);
+}
+
+#header{
   line-height: 8vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -28,7 +81,7 @@ header{
   top: 0;
   width: 100%;
   transition: 0.2;
-
+  z-index: 1;
 }
 button{
   width: 12vw;
@@ -64,11 +117,13 @@ button:hover{
   background-color: #a0a0a0;
 }
 .ski:hover{
-  background-color: #d9f9f9;
-  /*opacity: 0.5;*/
+
 }
 .ski{
   text-align: center;
+  background-color: rgb(227, 227, 227);
+  margin: 3vw;
+  border-radius: 2vw;
 }
 .div{
   margin: 1vw;
@@ -84,13 +139,30 @@ button:hover{
 }
 #bildesec{
   transition: all .5s;
+  width: 13vw;
 }
 #bildesec:hover{
   transform: scale(1.1);
 }
-body{
-  background-image: url(bild.jpg);
-  background-repeat: no-repeat;
-  background-position: top;
+
+.hovedGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.storsak{
+  grid-column: span 2;
+  grid-row: span 3;
+}
+#bodyhome{
+  background-image: url(https://wallpapersite.com/images/wallpapers/skiing-4383x2922-alaska-4k-5868.jpg);
+  background-size: cover;
   background-attachment: fixed;
+}
+::-webkit-scrollbar{
+  background-color: rgb(125, 125, 125);
+}
+::-webkit-scrollbar-thumb{
+  background-color: lightgrey;
+  border-radius: 12vw;
 }

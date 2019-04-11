@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <title>Produkt</title>
     <link rel="stylesheet" href="stilark.css">
+    <style media="screen">
+      .button{
+        opacity: 0;
+      }
+    </style>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -24,15 +29,16 @@
   <body>
     <header id="header">
 
-      <div style="margin: auto;"><div class="navLogo"></div></div>
-      <div><button class="div" type="button" name="button" onclick="visAlleSki()">Alle produkter</button></div>
-      <div><button class="div" type="button" name="button" onclick="visAlleBrett()">Brett</button></div>
-      <div><button class="div" type="button" name="button" onclick="visAlleTwintip()">Twintip</button></div>
-      <div><button class="div" type="button" name="button" onclick="visBesteProdukter()">Bestselgere</button></div>
+      <div class="button"><button class="div" type="button" name="button" onclick="visAlleSki()">Alle produkter</button></div>
+      <div class="button"><button class="div" type="button" name="button" onclick="visAlleBrett()">Brett</button></div>
+      <a href="index.html">  <div style="margin: auto;"><div class="navLogo"></div></div></a>
+      <div class="button"><button class="div" type="button" name="button" onclick="visAlleTwintip()">Twintip</button></div>
+      <div class="button"><button class="div" type="button" name="button" onclick="visBesteProdukter()">Bestselgere</button></div>
 
     </header>
 
-    <main>
+    <main id="produktmain">
+
 
     </main>
       <script type="text/javascript">
@@ -60,19 +66,23 @@
           let objekt = snapshot.val();
           console.log(key);
           console.log(key,objekt);
-
+          let farge = "";
+          if (objekt.farge2) {
+            farge = `<p>${objekt.farge1} og ${objekt.farge2}</p>`;
+          } else {
+            farge = `<p>${objekt.farge1}</p>`;
+          }
 
         main.innerHTML += `
           <section class="valgtSki">
           <h1>${objekt.navn}</h1>
-          <img src="${objekt.ImageURL}">
+          <img class="Produktbilde" src="${objekt.bilde}">
           <p>type: ${objekt.type}</p>
           <p>lengde: ${objekt.lengde}</p>
-          <p>farge1: ${objekt.farge1}</p>
-          <p>farge2: ${objekt.farge2}</p>
+          ${farge}
           <p>merke: ${objekt.merke}</p>
           <p>navn: ${objekt.navn}</p>
-          <p>pris: ${objekt.pris}</p>
+          <h2>pris: ${objekt.pris}</h2>
           </section>
         `
       }
