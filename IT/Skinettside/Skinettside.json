@@ -4,7 +4,7 @@
       "T001" : {
         "type" : "Twintip",
         "lengde" :170,
-        "bilde" : "taledrag.jpg",
+        "bilde" : "revolt.jpg",
         "farge1" : "Gul",
         "farge2" : "Svart",
         "merke" : "VOLKL",
@@ -14,7 +14,7 @@
       "T002" : {
         "type" : "Twintip",
         "lengde" :169,
-        "bilde" : ".jpg",
+        "bilde" : "volkl-wall.jpg",
         "farge1" : "Svart",
         "farge2" : "Orange",
         "merke" : "VOLKL",
@@ -24,7 +24,7 @@
       "T003" : {
         "type" : "Twintip",
         "lengde" :160,
-        "bilde" : ".jpg",
+        "bilde" : "volkl-vta80.jpg",
         "farge1" : "Hvit",
         "farge2" : "Blå",
         "merke" : "VOLKL",
@@ -34,9 +34,9 @@
       "T004" : {
         "type" : "Twintip",
         "lengde" :150,
-        "bilde" : ".jpg",
-        "farge1" : "",
-        "farge2" : "",
+        "bilde" : "transfer.jpg",
+        "farge1" : "Gul",
+        "farge2" : "Sort",
         "merke" : "VOLKL",
         "navn" : "Transfer",
         "pris" :1500
@@ -44,7 +44,7 @@
       "T005" : {
         "type" : "Twintip",
         "lengde" :170,
-        "bilde" : ".jpg",
+        "bilde" : "remedy.jpg",
         "farge1" : "sort",
         "farge2" : "blå",
         "merke" : "K2",
@@ -54,7 +54,7 @@
       "T006" : {
         "type" : "Twintip",
         "lengde" :160,
-        "bilde" : ".jpg",
+        "bilde" : "pinnacle.jpg",
         "farge1" : "Orange",
         "farge2" : "Svart",
         "merke" : "K2",
@@ -64,7 +64,7 @@
       "T007" : {
         "type" : "Twintip",
         "lengde" :170,
-        "bilde" : ".jpg",
+        "bilde" : "k2-catamaran.jpg",
         "farge1" : "Hvit",
         "farge2" : "Svart",
         "merke" : "K2",
@@ -74,7 +74,7 @@
       "T008" : {
         "type" : "Twintip",
         "lengde" :150,
-        "bilde" : ".jpg",
+        "bilde" : "HeadFramewall.jpg.png",
         "farge1" : "Svart",
         "farge2" : "Gul",
         "merke" : "HEAD",
@@ -84,7 +84,7 @@
       "T009" : {
         "type" : "Twintip",
         "lengde" :167,
-        "bilde" : ".jpg",
+        "bilde" : "head-show.jpg",
         "farge1" : "Blå",
         "farge2" : "Svart",
         "merke" : "HEAD",
@@ -94,7 +94,7 @@
       "T010" : {
         "type" : "Twintip",
         "lengde" :170,
-        "bilde" : ".jpg",
+        "bilde" : "HeadCaddy.jpg.png",
         "farge1" : "Blå",
         "farge2" : "Svart",
         "merke" : "HEAD",
@@ -107,7 +107,7 @@
       "B001" : {
         "type" : "Brett",
         "lengde" :140,
-        "bilde" : ".jpg",
+        "bilde" : "Head-Rush.jpg",
         "farge1" : "Sort",
         "farge2" : "Hvit",
         "merke" : "HEAD",
