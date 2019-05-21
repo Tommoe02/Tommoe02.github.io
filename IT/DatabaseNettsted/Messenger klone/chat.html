@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Messenger</title>
+    <link rel="" href="Style.css">
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#config-web-app -->
+
+     <script>
+       // Your web app's Firebase configuration
+       var firebaseConfig = {
+         apiKey: "AIzaSyDoarKsIR7JZbp1zfTSNkPMb1EL4H33ylI",
+         authDomain: "portofolje-cd7bc.firebaseapp.com",
+         databaseURL: "https://portofolje-cd7bc.firebaseio.com",
+         projectId: "portofolje-cd7bc",
+         storageBucket: "portofolje-cd7bc.appspot.com",
+         messagingSenderId: "784338236368",
+         appId: "1:784338236368:web:ef7910fa3a3a1e5e"
+       };
+       // Initialize Firebase
+       firebase.initializeApp(firebaseConfig);
+     </script>
+
+  </head>
+
+  <body>
+    <header>
+
+    </header>
+    <main>
+
+      <section id="uteSecMeldinger">
+         <div id="secMeldinger">
+          </div>
+      </section>
+
+      <form id="skjema">
+        <input id="iptMelding" type="text" name="inpMelding" value="">
+        <button id="bynSend" type="button" name="button">Send inn</button>
+
+      </form>
+    </main>
+
+    <script src="main.js" charset="utf-8"></script>
+
+  </body>
+</html>

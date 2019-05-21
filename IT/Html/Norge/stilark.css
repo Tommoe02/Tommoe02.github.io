@@ -1,0 +1,26 @@
+body{
+  background-color: #e9e9e9e9;
+  color: black;
+}
+ul{
+  list-style-type: none;
+  margin-left: 0px;
+
+}
+li{
+  display: inline;
+}
+li a {
+  text-decoration: none;
+  background-color: red;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  color: lightblue;
+
+}
+div{
+  background-color: pink;
+  width: 700px;
+
+}

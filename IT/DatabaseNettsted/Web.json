@@ -1,0 +1,52 @@
+{
+  "Spill" :{
+    "Port Royal" : {
+      "title" : "Port Royal",
+      "creator" :{
+        "firstname" : "Vebjørn",
+        "lastname" : "Drefvelin"
+      },
+      "sjanger" : "Arcade",
+      "aldersgrense" : "7+",
+      "type" : "skytespill",
+      "rating" : 8.7,
+      "cover" :,
+      "desc" :,
+      "avspillinger" : 201546,
+      "link" : ""
+    },
+
+    "Infinity" : {
+      "title" : "Infinity",
+      "creator" :{
+        "firstname" : "Christian",
+        "lastname" : "Rapp"
+      },
+      "rdate" : "26/03/2019",
+      "sjanger" : "Arcade", "Aventure"],
+      "aldersgrense" : "11+",
+      "type" : "skytespill",
+      "cover" : "../IMG/INFINITY_Gamecover.png",
+      "desc" : "Infinity is a dark and synyster game where the goal is to surpass the infinite, though is there any way to ecape it?",
+      "rating" : 9.2,
+      "avspillinger" : 201546,
+      "link" : "https://christiancameronrapp.github.io/IT1/INFINITY/"
+    },
+    "Big Chungus" : {
+      "title" : "Big Chungus",
+      "creator" :{
+        "firstname" : "Christian",
+        "lastname" : "Rapp"
+      },
+      "rdate" : "26/03/2019",
+      "sjanger" : "Arcade", "Aventure"],
+      "aldersgrense" : "5+",
+      "type" : "barnespill",
+      "cover" : "../IMG/Big_Chungus_game_cover.png",
+      "desc" : "Big Chungus is one of the most beloved characters the world has ever come across. Therefore we've decided to make a short, fun game where you can discover the world from his perspective.",
+      "rating" : 7.9,
+      "avspillinger" : 91546,
+      "link":"https://christiancameronrapp.github.io/IT1/Big%20Cungus%20v1/index.html"
+    }
+  }
+}

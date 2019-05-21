@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="stilark.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAZmdWI1aD31RI5homEkFX2CP86W3pCqfI",
+        authDomain: "secski-7667f.firebaseapp.com",
+        databaseURL: "https://secski-7667f.firebaseio.com",
+        projectId: "secski-7667f",
+        storageBucket: "secski-7667f.appspot.com",
+        messagingSenderId: "1031374694835"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+
+  <body id="bodyhome">
+
+      <header id="header">
+
+        <div><div class="navLogo"></div></div>
+        <a href="index.html"> <div><button class="div" type="button" name="button" onclick="visAlleSki()"> Våre produkter</button></div></a>
+        <a href="OmOss.html"> <div> <button class="div" type="button" name="button"> Om Oss </button> </div> </a>
+
+    </header>
+
+      <main id="homemain">
+
+        <a href="index.html"> <h1 id="firsttxt" class="hometxt">Bestselgere</h1>
+          <img class="homeimg" src="bilder/alpene.jpg"></a>
+
+        <a href="index.html"><h1 class="hometxt">Twintip Ski</h1>
+          <img class="homeimg" src="bilder/taledrag.jpg"></a>
+
+        <a href="index.html"><h1 class="hometxt">Snowboard</h1>
+          <img id="lastimg" class="homeimg" src="bilder/snowbord-freeride.jpg"></a>
+
+      </main>
+
+  </body>
+</html>

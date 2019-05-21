@@ -1,0 +1,139 @@
+body{
+  background: url("Drift.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+h1{
+  font-size: 50px;
+  text-align: center;
+  font-family: arial;
+  padding: 150px;
+  margin-top: 0px;
+}
+img{
+  width: 90%;
+  height: 90%;
+}
+
+iframe{
+  width: 1200px;
+  height: 650px;
+}
+div{
+  border: 5px solid purple;
+  background-color: white;
+  margin: 30px;
+  margin-top: 0;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+ul{
+  margin-bottom: 100px;
+  text-align: center;
+  list-style-type: none;
+  margin-left: 0px;
+  margin-right: auto;
+  margin-right: auto;
+}
+
+li{
+  display: inline;
+  background-color: purple;
+  width: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+h1 a{
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+}
+
+li a{
+  text-decoration: none;
+  margin: 10px;
+  color: lightblue;
+}
+section a{
+  text-decoration: none;
+}
+
+a{
+  margin-left: 150px;
+  margin-right: 150;
+  width: 600px;
+}
+
+#hjem{
+  grid-column: 3;
+}
+#sport{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+main{
+  display: grid;
+}
+
+main > div.Kuk {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  z-index: 1;
+}
+
+Main > div > p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#Ree{
+  z-index: 0;
+}
+
+.hovedGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;}
+
+.storsak{
+  grid-column: span 2;
+  grid-row: span 2;
+
+}
+.middelssak{
+grid-row: span 2;
+grid-column: span 1;
+
+}
+.litensak{
+grid-row: span 1;
+grid-column: span 1;
+width: 300px;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 0px;
+    padding-left: 0%;
+    padding: 0px;
+    height: 46px;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}

@@ -1,0 +1,148 @@
+{
+  "dyr" : {
+    "hunder" : {
+      "H001" : {
+        "alder" : 4,
+        "bilde" : "hund1.jpg",
+        "farge1" : "Hvit",
+        "farge2" : "",
+        "navn" : "Fido"
+      },
+      "H002" : {
+        "alder" : 3,
+        "bilde" : "hund2.jpg",
+        "farge1" : "Hvit",
+        "farge2" : "Beige",
+        "navn" : "Ruffen"
+      },
+      "H003" : {
+        "alder" : 6,
+        "bilde" : "hund3.jpg",
+        "farge1" : "Beige",
+        "farge2" : "",
+        "navn" : "Charlie"
+      },
+      "H004" : {
+        "alder" : 9,
+        "bilde" : "hund4.jpg",
+        "farge1" : "Hvit",
+        "farge2" : "Brun",
+        "navn" : "Trofast"
+      },
+      "H005" : {
+        "alder" : 11,
+        "bilde" : "hund5.jpg",
+        "farge1" : "Hvit",
+        "farge2" : "",
+        "navn" : "Tassen"
+      },
+      "H006" : {
+        "alder" : 8,
+        "bilde" : "hund6.jpg",
+        "farge1" : "Hvit",
+        "farge2" : "Svart",
+        "navn" : "Bastian"
+      },
+      "H007" : {
+        "alder" : 8,
+        "bilde" : "hund7.jpg",
+        "farge1" : "Hvit",
+        "farge2" : "Brun",
+        "navn" : "Ruffen"
+      },
+      "H008" : {
+        "alder" : 6,
+        "bilde" : "hund8.jpg",
+        "farge1" : "Svart",
+        "farge2" : "Hvit",
+        "navn" : "Tarzan"
+      },
+      "H009" : {
+        "alder" : 10,
+        "bilde" : "hund9.jpg",
+        "farge1" : "Brun",
+        "farge2" : "",
+        "navn" : "Luna"
+      },
+      "H010" : {
+        "alder" : 7,
+        "bilde" : "hund10.jpg",
+        "farge1" : "Hvit",
+        "farge2" : "Svart",
+        "navn" : "Bella"
+      }
+    },
+    "katter" : {
+      "K001" : {
+        "alder" : 8,
+        "bilde" : "katt1.jpg",
+        "farge1" : "Grå",
+        "farge2" : "Hvit",
+        "navn" : "Milly"
+      },
+      "K002" : {
+        "alder" : 4,
+        "bilde" : "katt2.jpg",
+        "farge1" : "Hvit",
+        "farge2" : "Beige",
+        "navn" : "Simba"
+      },
+      "K003" : {
+        "alder" : 7,
+        "bilde" : "katt3.jpg",
+        "farge1" : "Grå",
+        "farge2" : "",
+        "navn" : "Pus"
+      },
+      "K004" : {
+        "alder" : 4,
+        "bilde" : "katt4.jpg",
+        "farge1" : "Grå",
+        "farge2" : "Hvit",
+        "navn" : "Sofus"
+      },
+      "K005" : {
+        "alder" : 2,
+        "bilde" : "katt5.jpg",
+        "farge1" : "Grå",
+        "farge2" : "Hvit",
+        "navn" : "Mira"
+      },
+      "K006" : {
+        "alder" : 12,
+        "bilde" : "katt6.jpg",
+        "farge1" : "Grå",
+        "farge2" : "",
+        "navn" : "Mille"
+      },
+      "K007" : {
+        "alder" : 7,
+        "bilde" : "katt7.jpg",
+        "farge1" : "Grå",
+        "farge2" : "",
+        "navn" : "Mons"
+      },
+      "K008" : {
+        "alder" : 4,
+        "bilde" : "katt8.jpg",
+        "farge1" : "Hvit",
+        "farge2" : "Brun",
+        "navn" : "Nusse"
+      },
+      "K009" : {
+        "alder" : 3,
+        "bilde" : "katt9.jpg",
+        "farge1" : "Beige",
+        "farge2" : "Hvit",
+        "navn" : "Mia"
+      },
+      "K010" : {
+        "alder" : 13,
+        "bilde" : "katt10.jpg",
+        "farge1" : "Brun",
+        "farge2" : "",
+        "navn" : "Tigergutt"
+      }
+    }
+  }
+}

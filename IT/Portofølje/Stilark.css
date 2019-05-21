@@ -1,0 +1,26 @@
+*{font-family: monospace;}
+
+body{
+  margin: 0;
+  background-image: url();
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#mainindex{
+
+  margin-top: 12vw;
+}
+.navLogo{
+
+  background-image: url("bilder/skilogo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 3.3vw;
+}
