@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="stilark.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
     <title>Passion</title>
 
 
@@ -22,13 +26,26 @@
   </head>
 
   <body>
-    <header id="header">
+    <header id="header" id="VanligHeader">
 
-      <a href="hjem.html">  <div style="margin: auto;"><div class="navLogo"></div></div></a>
-      <div><button class="div" type="button" name="button" onclick="visAlleSki()">Alle produkter</button></div>
-      <div><button class="div" type="button" name="button" onclick="visAlleBrett()">Brett</button></div>
-      <div><button class="div" type="button" name="button" onclick="visAlleTwintip()">Twintip</button></div>
-      <div><button class="div" type="button" name="button" onclick="visBesteProdukter()">Bestselgere</button></div>
+      <a id="vanligLogo" href="Hjem.html">  <div style="margin: auto;">  <div class="navLogo"> <img  id="navLogoProdukt" src="bilder/skilogo.png"> </div>  </div></a>
+
+      <div><button class="div" type="button" name="button" onclick="visAlleSki()"> <p class="BtnTxt"> Alle produkter </p></button></div>
+      <div><button class="div" type="button" name="button" onclick="visAlleBrett()"><p class="BtnTxt">Brett</p></button></div>
+      <div><button class="div" type="button" name="button" onclick="visAlleTwintip()"><p class="BtnTxt">Twintip</p></button></div>
+      <div><button class="div" type="button" name="button" onclick="visBesteProdukter()"><p class="BtnTxt">Bestselgere</p></button></div>
+      <div class="div dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Sorter Produkter
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+          <li role="presentation"> <button id="DropDownB" type="button" name="button" onclick="visPrissortering()"><p id="dtbtntxt"> Høy til lav</p></button></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"> <button id="DropDownB" type="button" name="button" onclick="visPris2()"><p id="dtbtntxt"> Lav til Høy </p></button> </li>
+
+
+        </ul>
+      </div>
+
 
     </header>
     <main id="mainindex">
@@ -80,6 +97,18 @@
         twintip.orderByChild("pris").limitToLast(4).on("child_added",genererHTML);
         Brett.orderByChild("pris").limitToLast(2).on("child_added",genererHTML);
       }
+      function visPrissortering(){
+        secSki.innerHTML = "";
+        twintip.orderByChild("pris").limitToLast(10).on("child_added",genererHTMLSnudd);
+        Brett.orderByChild("pris").limitToLast(5).on("child_added",genererHTMLSnudd);
+      }
+
+      function visPris2(){
+        secSki.innerHTML = "";
+        twintip.orderByChild("pris").limitToFirst(10).on("child_added",genererHTML);
+        Brett.orderByChild("pris").limitToFirst(5).on("child_added",genererHTML);
+
+      }
       function genererHTML(snapshot){
         console.log(snapshot.val());
         let parent = snapshot.ref.parent.key;
@@ -98,13 +127,44 @@
         secSki.innerHTML += `
           <article class="ski">
             <a href="produkt.html?id=${ref}">
-            <h1><b>${objekt.merke}</b> - ${objekt.navn}</h1>
+            <h1 id="ikkebla"><b>${objekt.merke}</b> - ${objekt.navn}</h1>
             <img id="bildesec" src="${objekt.bilde}" alt="">
             <p>${fargee}</p>
             <p>Pris: ${objekt.pris}</p>
             </a>
           </article>
         `;
+
+if (secSki != 0) {
+  load.innerHTML = ``;
+}
+      }
+
+      function genererHTMLSnudd(snapshot){
+        console.log(snapshot.val());
+        let parent = snapshot.ref.parent.key;
+        let key = snapshot.key;
+        let ref = parent +"/"+ key;
+        let objekt = snapshot.val();
+        let fargee = "";
+        if (objekt.farge2) {
+          fargee =` ${objekt.farge1} & ${objekt.farge2}`;
+
+        } else {
+          fargee = `${objekt.farge1}`;
+        }
+
+
+        secSki.innerHTML = `
+          <article class="ski">
+            <a href="produkt.html?id=${ref}">
+            <h1 id="ikkebla"><b>${objekt.merke}</b> - ${objekt.navn}</h1>
+            <img id="bildesec" src="${objekt.bilde}" alt="">
+            <p>${fargee}</p>
+            <p>Pris: ${objekt.pris}</p>
+            </a>
+          </article>
+        ` + secSki.innerHTML;
 
 if (secSki != 0) {
   load.innerHTML = ``;

@@ -1,56 +1,60 @@
-//Referanse til html elementer
+// Referanser til HTML elementer
+
 const secMeldinger = document.querySelector("#secMeldinger");
-const uteSecMeldinger = document.querySelector("#uteSecMeldinger");
 const skjema = document.querySelector("#skjema");
 const inpMelding = document.querySelector("#inpMelding");
-const btnSend = document.querySelector("#btnSend");
-// refferanse til fire Firebase
+const utesecmld = document.querySelector("#uteSecMld");
 
-//Globale variabler
-let user;
-
-//skjekke om bruker er logget inn
-firebase.auth().onAuthStateChanged( newUser =>{
-  if(newUser){
-    //sette user til den innloggende brukeren
-    user = newUser;
-    //Hendelsesfunksjon hvis bruker er innlogget
-    console
-    btnSend.onclick = sendMelding;
-    meldinger.on("child_added",visMelding);
-  }
-  else{
-    secMeldinger.innerHTML = `<p> Du er ikke innlogget, logg inn for å se meldinger</p>`
-    <a herf= "Login.html"> Logg inn er </a>
-  }
-})
-
+//Referanser til firebase databasen
 
 const db = firebase.database();
 const meldinger = db.ref("messengerMeldinger");
+const btnSend = document.querySelector("#btnSend");
 
-//funksjonsdefenisjoner
-function sendMedlding(){
-  let nyMelding(){
-    brukerId: user.email,
-    brukerNavn: user.displayName,
-    melding: inpmelding.value
+// Globale variabler
+let user;
+
+// Sjekke om bruker er logget inn
+firebase.auth().onAuthStateChanged(newUser => {
+  if(newUser){
+    // Sette user til den innloggede brukeren
+    user = newUser;
+    //Hendelsesfunksjoner hvis bruker er innlogget
+    console.log(user);
+    btnSend.onclick = sendMelding;
+    meldinger.on("child_added",visMelding);
+  } else {
+    secMeldinger.innerHTML = `<p>Du er ikke logget inn</p>
+    <a href="login.html">Logg inn her</a>
+    `;
+  }
+})
+
+//Funksjonsdefinisjoner
+
+function sendMelding(){
+  let nyMelding = {
+    brukerID: user.email,
+    brukernavn: user.displayName,
+    melding: inpMelding.value
   };
-  meldinger.push(nyMelding);
-  console.log("Melding sendt");
+  meldinger.push(inpMelding.value);
+  console.log("melding sendt");
 }
 
 function visMelding(snapshot){
   let key = snapshot.key;
-  let objekt = snapshot.Val();
-  secMeldinger.innerHTML += `<p>Brukernavn: ${objekt.brukerId} - ${objekt.melding}</p>`;
+  let objekt = snapshot.val();
+  secMeldinger.innerHTML += <p>${objekt.brukerID} - ${objekt.melding}</p>;
   scrollToBottom();
-
 }
 
+//Hendelsesfunksjoner
 
+
+//Spørring til databasen
 
 
 function scrollToBottom(){
-  uteSecMeldinger.scrollHeight = uteSecMeldinger.scrollHeightheight;
+  utesecmld.scrollTop = utesecmld.scrollHeight;
 }

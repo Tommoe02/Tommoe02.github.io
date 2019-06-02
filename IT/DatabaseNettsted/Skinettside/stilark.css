@@ -14,6 +14,20 @@ a{
   color: black;
 }
 
+#navLogoProdukt{
+  grid-column: span 6;
+  text-align: center;
+  display: block;
+  margin: auto;
+  width: 8vw;
+  height: 7vw;
+}
+
+#ProduktHeader{
+  align-items: center;
+  text-align: center;
+}
+
 #mainindex{
 
   margin-top: 12vw;
@@ -73,6 +87,17 @@ a{
   margin-top: 10vw;
 }
 
+main p{
+  font-size: 1vw;
+  color: black;
+
+}
+
+#ikkebla{
+  color: black;
+  font-size: 1.7vw;
+}
+
 .homeimg{
 
   display: block;
@@ -90,9 +115,9 @@ a{
 
 #header{
 
-  line-height: 8vw;
+  /*line-height: 8vw;*/
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   margin: auto;
   text-align: center;
   margin-bottom: 40px;
@@ -106,12 +131,20 @@ a{
   z-index: 1;
 }
 
-button{
+.BtnTxt{
+  font-size: 1.7vw;
+  color: black;
+  text-align: center;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  border-radius: 1vw;
+  padding: 0;
+  align-items: center;
+}
 
+#menu1{
   width: 12vw;
   height: 6vw;
   background-color: #848484;
-  color: white;
   border: .2vw solid #c1c1c1;
   font-size: 1.7vw;
   color: black;
@@ -119,6 +152,21 @@ button{
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   border-radius: 1vw;
   padding: 0;
+  align-items: center;
+}
+
+button{
+  width: 12vw;
+  height: 6vw;
+  background-color: #848484;
+  border: .2vw solid #c1c1c1;
+  font-size: 1.7vw;
+  color: black;
+  text-align: center;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  border-radius: 1vw;
+  padding: 0;
+  align-items: center;
 }
 
 .loggInn{
@@ -146,7 +194,6 @@ button:hover{
 }
 
 .ski{
-
   text-align: center;
   background-color: white;
   margin: 3vw;
@@ -159,18 +206,29 @@ button:hover{
 }
 
 .navLogo{
+  margin-top: 0.7vw;
+  grid-column: span 6;
+  text-align: center;
+  display: block;
+}
 
-  background-image: url("bilder/skilogo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  padding: 3.3vw;
+.navLogo2{
+  margin-left: 46vw;
+}
+
+#VanligHeader{
+  margin-top: 0.7vw;
+  grid-column: span 6;
+  text-align: center;
+  display: block;
+  margin-left: 0vw;
+
 }
 
 #bildesec{
-
   transition: all .5s;
   width: 13vw;
+  margin-bottom: 0.4vw;
 }
 
 #bildesec:hover{
@@ -296,3 +354,75 @@ button:hover{
   text-align: center;
   font-size: 2vw;
 }
+
+#DropDownB{
+  background-color: white;
+  border-color: white;
+  height: 3vw;
+  width: 10vw;
+  font-size: 1vw;
+  align-items: center;
+  display: block;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+
+}
+#dtbtntxt{
+  background-color: #e9e9e9;
+  height: 3vw;
+  z-index: 33;
+}
+
+  /*FUll HD*/
+  @media(max-width: 1920px){
+    #secSki{
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 5px;
+      width: 90%;
+      margin: auto;
+    }
+  }
+  /*Gammel PC*/
+  @media(max-width: 1366px){
+    #secSki{
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5px;
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  /* Telefon*/
+  @media(max-width: 750px){
+    #secSki{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 5px;
+      width: 90%;
+      margin: auto;
+      text-align: center;
+    }
+
+
+    .ski{
+      text-align: center;
+      background-color: white;
+      margin: 3vw;
+      border-radius: 2vw;
+      width: 60%;
+      display: inline-block;
+      margin-left: 18vw;
+    }
+
+.valgtSki{
+  width: 80%;
+  height: 200px;
+  font-size: 3vw;
+}
+
+  }

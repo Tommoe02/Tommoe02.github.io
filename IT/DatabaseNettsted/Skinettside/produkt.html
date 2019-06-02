@@ -1,79 +1,81 @@
 <!DOCTYPE html>
 <html lang="nb" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Produkt</title>
-    <link rel="stylesheet" href="stilark.css">
-    <style media="screen">
-      .button{
+
+<head>
+  <meta charset="utf-8">
+  <title>Produkt</title>
+  <link rel="stylesheet" href="stilark.css">
+  <style media="screen">
+    .button{
         opacity: 0;
       }
     </style>
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyAZmdWI1aD31RI5homEkFX2CP86W3pCqfI",
-        authDomain: "secski-7667f.firebaseapp.com",
-        databaseURL: "https://secski-7667f.firebaseio.com",
-        projectId: "secski-7667f",
-        storageBucket: "secski-7667f.appspot.com",
-        messagingSenderId: "1031374694835"
-      };
-      firebase.initializeApp(config);
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAZmdWI1aD31RI5homEkFX2CP86W3pCqfI",
+      authDomain: "secski-7667f.firebaseapp.com",
+      databaseURL: "https://secski-7667f.firebaseio.com",
+      projectId: "secski-7667f",
+      storageBucket: "secski-7667f.appspot.com",
+      messagingSenderId: "1031374694835"
+    };
+    firebase.initializeApp(config);
+  </script>
 
-    </script>
+</head>
 
-  </head>
-
-  <body>
-    <header id="header">
-
-      <div class="button"><button class="div" type="button" name="button" onclick="visAlleSki()">Alle produkter</button></div>
-      <div class="button"><button class="div" type="button" name="button" onclick="visAlleBrett()">Brett</button></div>
-      <a href="index.html">  <div style="margin: auto;"><div class="navLogo"></div></div></a>
-      <div class="button"><button class="div" type="button" name="button" onclick="visAlleTwintip()">Twintip</button></div>
-      <div class="button"><button class="div" type="button" name="button" onclick="visBesteProdukter()">Bestselgere</button></div>
-
-    </header>
-
-    <main id="produktmain">
+<body>
+  <header id="header" id="ProduktHeader">
 
 
-    </main>
-      <script type="text/javascript">
-        const main = document.querySelector("main");
+    <a href="index.html">
+      <div style="margin: auto;">
+        <div class="navLogo2" class="navLogo"> <img  id="navLogoProdukt" src="bilder/skilogo.png"> </div>
+      </div>
+    </a>
 
-        let url_string = window.location.href;
-        let url = new URL(url_string);
-        let id = url.searchParams.get("id");
+  </header>
 
-        console.log(id);
+  <main id="produktmain">
 
-        const db = firebase.database();
-        const ski = db.ref();
-        const valgtSki = db.ref("Ski/"+id);
 
-        visValgtSki();
+  </main>
+  <script type="text/javascript">
+    const main = document.querySelector("main");
 
-        function visValgtSki(){
-          main.innerHTML = ``;
-          valgtSki.on("value",genererHTML);
-        }
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    let id = url.searchParams.get("id");
 
-        function genererHTML(snapshot){
-          let key = snapshot.key;
-          let objekt = snapshot.val();
-          console.log(key);
-          console.log(key,objekt);
-          let farge = "";
-          if (objekt.farge2) {
-            farge = `<p class="skitxt">${objekt.farge1} og ${objekt.farge2}</p>`;
-          } else {
-            farge = `<p class="skitxt">${objekt.farge1}</p>`;
-          }
+    console.log(id);
 
-        main.innerHTML += `
+    const db = firebase.database();
+    const ski = db.ref();
+    const valgtSki = db.ref("Ski/" + id);
+
+    visValgtSki();
+
+    function visValgtSki() {
+      main.innerHTML = ``;
+      valgtSki.on("value", genererHTML);
+    }
+
+    function genererHTML(snapshot) {
+      let key = snapshot.key;
+      let objekt = snapshot.val();
+      console.log(key);
+      console.log(key, objekt);
+      let farge = "";
+      if (objekt.farge2) {
+        farge = `<p class="skitxt">${objekt.farge1} og ${objekt.farge2}</p>`;
+      } else {
+        farge = `<p class="skitxt">${objekt.farge1}</p>`;
+      }
+
+      main.innerHTML +=
+        `
           <section class="valgtSki">
           <h1 id="bapheader">${objekt.navn}</h1>
           <img class="Produktbilde" src="${objekt.bilde}"><br>
@@ -85,10 +87,8 @@
           <h2 id="PrisProdukt">${objekt.pris};-</h2>
           </section>
         `
-      }
+    }
+  </script>
+</body>
 
-
-
-      </script>
-  </body>
 </html>
