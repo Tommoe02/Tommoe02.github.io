@@ -1,0 +1,120 @@
+body{
+  margin:0vw;
+}
+
+header{
+  background-color: black;
+  text-align: center;
+  font-weight: bold;
+}
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  line-height: 4vw;
+  font-size: 2vw;
+  width: 32%;
+  margin: auto;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.nyheter-main{
+  display: grid;
+  grid-gap: 1vw;
+  margin: 1vw;
+}
+
+#Nyhet1{
+  width: 50%;
+}
+
+#Nyhet{
+
+  width: 75%;
+}
+
+#Midtbilde{
+  width: 125%;
+  margin-top: 10vw;
+  margin-left: 2.5vw;
+}
+
+
+#biggo{
+
+  width: 50%;
+}
+.home-main-1{
+
+  grid-row: 1;
+}
+
+.home-main-2{
+  grid-column: 2/4;
+}
+
+.home-main-3{
+
+  grid-column: 5;
+  background-color: ;
+
+}
+
+h2{
+
+  grid-column: 3;
+  text-align: center;
+
+}
+
+.home-main-4{
+
+  grid-column: 2/4;
+  margin-left: 10vw;
+
+}
+
+
+.knappLink:hover{
+
+  transition: 0.5s;
+  background-color: red;
+}
+
+
+.knappLink{
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+
+}
+
+.LogoLink{
+  grid-column: 2;
+  width: 50%;
+}
+
+.col-span-logo{
+
+  grid-column: 3;
+
+}
+
+.usynlig{
+  opacity: 0;
+}
+
+
+main{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    margin-top: 3vw;
+}
+
+.Kontaktinfo{
+  text-align: center;
+  margin-top: 8vw;
+  border-top: solid;
+  border-width: 0.2vw;
+  border-color: red;
+  color: black;
+}
